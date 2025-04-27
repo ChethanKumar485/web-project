@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech_Bees</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src='sandi.jpeg' alt="Roarstar logo">
+            <h1>Tech_Bees</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#demo">Try Demo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Deepfakes with AI-Powered Detection</h2>
+                <p>Analyzing videos, images, and audio for signs of manipulation using multimodal AI techniques.</p>
+                <button id="try-now">Try Now</button>
+            </div>
+            <!-- <div class="hero-image">
+                <img src="background.jpg" alt="Deepfake detection illustration">
+            </div> -->
+        </section>
+
+        <section id="demo" class="detection-section">
+            <h2>Deepfake Detection</h2>
+            <div class="detection-options">
+                <div class="option-card" id="video-option">
+                    <i class="fas fa-video"></i>
+                    <h3>Video Analysis</h3>
+                    <p>Upload a video file to check for deepfake indicators</p>
+                </div>
+                <div class="option-card" id="image-option">
+                    <i class="fas fa-image"></i>
+                    <h3>Image Analysis</h3>
+                    <p>Upload an image to detect facial manipulations</p>
+                </div>
+                <div class="option-card" id="audio-option">
+                    <i class="fas fa-microphone"></i>
+                    <h3>Audio Analysis</h3>
+                    <p>Upload an audio clip to detect synthetic voices</p>
+                </div>
+            </div>
+
+            <div class="upload-area hidden" id="upload-area">
+                <div class="file-drop-zone" id="drop-zone">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & Drop your file here or click to browse</p>
+                    <input type="file" id="file-input" accept="video/,image/,audio/*">
+                </div>
+                <div class="file-info hidden" id="file-info">
+                    <p>Selected file: <span id="file-name"></span></p>
+                    <button id="analyze-btn">Analyze</button>
+                </div>
+            </div>
+
+            <div class="analysis-results hidden" id="results">
+                <div class="loading">
+                    <img src="Animation - 1745581514416.gif" alt="Loading">
+                    <p>Analyzing media for deepfake indicators...</p>
+                </div>
+                <div class="result-content hidden" id="result-content">
+                    <h3>Analysis Results</h3>
+                    <div class="result-metrics">
+                        <div class="metric">
+                            <h4>Deepfake Probability</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="probability-bar"></div>
+                            </div>
+                            <span id="probability-value">0%</span>
+                        </div>
+                        <div class="metric">
+                            <h4>Confidence Level</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="confidence-bar"></div>
+                            </div>
+                            <span id="confidence-value">0%</span>
+                        </div>
+                    </div>
+                    <div class="detailed-results">
+                        <h4>Detailed Analysis</h4>
+                        <ul id="detailed-list">
+                            <!-- Will be populated by JavaScript -->
+                        </ul>
+                    </div>
+                    <div class="visualization">
+                        <h4>Visual Indicators</h4>
+                        <canvas id="visualization-canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works">
+            <h2>How Roarstar Deep Fake Detector Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Multimodal Analysis</h3>
+                    <p>Examines video frames, audio tracks, and their synchronization for inconsistencies</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Facial Emotion Detection</h3>
+                    <p>Analyzes micro-expressions and emotion patterns that often appear unnatural in deepfakes</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Synthetic Voice Patterns</h3>
+                    <p>Detects artifacts and patterns common in AI-generated voices</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Blink Rate Analysis</h3>
+                    <p>Identifies unnatural blink patterns that often appear in manipulated videos</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Roarstar Deep Fake Detector</h2>
+            <p>Roarstar Deep Fake Detector is an AI-powered deepfake detection system developed to combat the growing threat of synthetic media on social platforms. Our multimodal approach analyzes multiple indicators to provide accurate detection results.</p>
+            <p>The system was trained on datasets including DFDC (Deepfake Detection Challenge) and DFD (Deep Fake Detection) to recognize the latest generation of deepfake techniques.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Roarstar Deep Fake Detector -developed by tech_bees</p>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+</html>
